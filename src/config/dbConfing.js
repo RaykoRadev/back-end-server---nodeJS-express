@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 
 async function initDatabase() {
     const dbUrl = `mongodb://localhost:27017`;
-    const atlasUrl = `mongodb+srv://christmas898_db_user:QtfALyMxHvdHLCXU@pet-shelter-react.dlqsmrb.mongodb.net`;
     //todo may need change
     const dbName = "petShelter";
     try {
