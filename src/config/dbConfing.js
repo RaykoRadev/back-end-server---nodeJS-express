@@ -6,7 +6,7 @@ async function initDatabase() {
     //todo may need change
     const dbName = "petShelter";
     try {
-        await mongoose.connect(dbUrl, { dbName });
+        await mongoose.connect(process.env.atlasUrl, { dbName });
         console.log("DB connected succssesfully");
     } catch (err) {
         console.log("Db connection faild");
