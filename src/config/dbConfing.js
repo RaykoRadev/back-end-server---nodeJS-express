@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 async function initDatabase() {
     const dbUrl = `mongodb://localhost:27017`;
+    // const atlasUrl = process.env.atlasUrl;
     //todo may need change
     const dbName = "petShelter";
     try {
