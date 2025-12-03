@@ -4,6 +4,12 @@ import User from "../models/User.js";
 import { generateAuthToken } from "../utils/userUtils.js";
 
 export async function register(userData) {
+    // const email = userData.email;
+    const existingUser = await User.findOne({ email: userData.email });
+    if (existingUser) {
+        throw new Error("The email already exists!");
+    }
+
     const user = await User.create(userData);
     const token = generateAuthToken(user);
     return {
