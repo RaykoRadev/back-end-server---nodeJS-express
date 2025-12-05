@@ -38,7 +38,7 @@ export async function getAll(rawQuery) {
 }
 
 export async function getOne(postId, userId) {
-    const post = await Animal.findById(postId).populate("author");
+    const post = await Animal.findById(postId).populate("author", "-password");
 
     // const isOwner = review.owner.equals(userId);
     // const isInWishList = review.wishingList.includes(userId);
